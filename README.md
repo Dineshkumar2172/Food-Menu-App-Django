@@ -26,3 +26,9 @@
 
 ```urls.py``` - contains all the URL patterns that are required inside our application.
 
+## Django Components
+
+```urls``` - maps web addresses (URLs) to Python functions called views
+
+```views``` - functions contains business logic to process the incoming request and send back response.
+
