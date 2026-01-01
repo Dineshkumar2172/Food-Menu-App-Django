@@ -32,3 +32,4 @@
 
 ```views``` - functions contains business logic to process the incoming request and send back response.
 
+```Models``` - it is a blueprint which is used to create database tables and interact with them without having to write SQL. Model is a python class. Models are defined in models.py file.
