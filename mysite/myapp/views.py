@@ -9,4 +9,5 @@ def index(request):
 
 def item(request):
     item_list = Item.objects.all()
-    return HttpResponse(item_list)
+    # return HttpResponse(item_list)
+    return render(request, "myapp/index.html")
