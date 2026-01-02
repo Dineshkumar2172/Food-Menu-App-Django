@@ -14,3 +14,10 @@ def item(request):
     }
     # return HttpResponse(item_list)
     return render(request, "myapp/index.html", context=context)
+
+def detail(request, id):
+    item_detail = Item.objects.get(id=id)
+    context = {
+        "item_detail": item_detail
+    }
+    return render(request, "myapp/detail.html", context=context)
