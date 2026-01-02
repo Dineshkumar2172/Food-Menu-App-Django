@@ -1,7 +1,10 @@
 <ul>
     {% for item in item_list %}
     <li>
-        <a href="/myapp/{{item.id}}">
+        {% comment %} we have removed the hardcoded url part by replacing it with url name instead {% endcomment %}
+        {% comment %} we are using the url names as detail which required item id as passing parameter  {% endcomment %}
+        {% comment %} <a href="/myapp/{{item.id}}"> {% endcomment %}
+        <a href="{% url 'detail' item.id %}">
             {{ item.item_name }} -> {{ item.item_price }} -> {{ item.item_desc }}
         </a>
     </li>
