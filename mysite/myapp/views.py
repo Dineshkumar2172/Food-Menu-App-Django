@@ -28,9 +28,23 @@ def create_item(request):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            return redirect('myapp:index')
+            return redirect('myapp:home')
 
     context = {
         'form': form
     }
+    return render(request, "myapp/item-form.html", context)
+
+def update_item(request, id):
+    item = Item.objects.get(id=id)
+    form = ItemForm(request.POST or None, instance=item)
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            return redirect('myapp:home')
+
+    context = {
+        'form': form
+    }
+
     return render(request, "myapp/item-form.html", context)
