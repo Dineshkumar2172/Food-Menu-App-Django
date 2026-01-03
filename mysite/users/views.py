@@ -11,7 +11,7 @@ def register_user(request):
             form.save()
             username = form.cleaned_data.get("username")
             messages.success(request, f"Welcome {username}, your account has been successfully created")
-            return redirect("myapp:home")
+            return redirect("login")
 
     form = RegisterForm()
     context = {
