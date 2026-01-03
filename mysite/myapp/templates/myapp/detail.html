@@ -11,7 +11,7 @@
             <div>{{ item_detail.item_desc }}</div>
             <div>
                 <a class="bg-yellow-500 px-4 px-2 rounded-md font-bold text-white" href="">Edit</a>
-                <a class="bg-red-500 px-4 px-2 rounded-md font-bold text-white" href="">Delete</a>
+                <a class="bg-red-500 px-4 px-2 rounded-md font-bold text-white" href="{% url 'myapp:delete_item' item_detail.id %}">Delete</a>
             </div>
         </div>
     </div>

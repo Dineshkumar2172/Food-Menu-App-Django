@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html'%}
+
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <h1>Are you sure you want to delete the Item {{ item.id }}?</h2>
+    <button type="submit" href="{% url 'myapp:delete_item' item.id%}">Confirm</button>
+</form>
+{% endblock %}
