@@ -21,3 +21,4 @@ def detail(request, id):
         "item_detail": item_detail
     }
     return render(request, "myapp/detail.html", context=context)
+
