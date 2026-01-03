@@ -1,12 +1,27 @@
-<ul>
-    {% for item in item_list %}
-    <li>
-        {% comment %} we have removed the hardcoded url part by replacing it with url name instead {% endcomment %}
-        {% comment %} we are using the url names as detail which required item id as passing parameter  {% endcomment %}
-        {% comment %} <a href="/myapp/{{item.id}}"> {% endcomment %}
-        <a href="{% url 'myapp:detail' item.id %}">
-            {{ item.item_name }} -> {{ item.item_price }} -> {{ item.item_desc }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+{% load static %}
+
+!<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    </head>
+    <body>
+        <ul>
+            {% for item in item_list %}
+            <li>
+                {% comment %} we have removed the hardcoded url part by replacing it with url name instead {% endcomment %}
+                {% comment %} we are using the url names as detail which required item id as passing parameter  {% endcomment %}
+                {% comment %} <a href="/myapp/{{item.id}}"> {% endcomment %}
+                <a href="{% url 'myapp:detail' item.id %}">
+                    {{ item.item_name }} -> {{ item.item_price }} -> {{ item.item_desc }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
