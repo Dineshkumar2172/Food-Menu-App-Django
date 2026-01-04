@@ -103,6 +103,12 @@ class UpdateClassView(UpdateView):
     model = Item
     fields = ["item_name", "item_desc", "item_price", "item_image"]
     template_name_suffix = "_update_form" # to configure template suffix to look for
+    
+    # overridden queryset to fetch items only belonging to current user.
+    # as this method is overridden, internally it prevents accessing records belonging to other users
+    # hence preventing users from updating items belonging to different users
+    def get_queryset(self):
+        return Item.objects.filter(user_name=self.request.user)
 
 class DeleteClassView(DeleteView):
     model = Item
