@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -42,17 +43,26 @@ class DetailClassView(DetailView):
     template_name = "myapp/detail.html"
     context_object_name = "item_detail"
 
-def create_item(request):
-    form = ItemForm(request.POST or None)
-    if request.method == "POST":
-        if form.is_valid():
-            form.save()
-            return redirect('myapp:home')
+# def create_item(request):
+#     form = ItemForm(request.POST or None)
+#     if request.method == "POST":
+#         if form.is_valid():
+#             form.save()
+#             return redirect('myapp:home')
 
-    context = {
-        'form': form
-    }
-    return render(request, "myapp/item-form.html", context)
+#     context = {
+#         'form': form
+#     }
+#     return render(request, "myapp/item-form.html", context)
+
+class CreateClassView(CreateView):
+    # whenever we create a class based createview, it always look for
+    # the template with name <model_name>_form.html, for example if our model
+    # is named as food, then it'll look for food_form.html from templates.
+    # in our case it'll look for item_form.html.
+    model = Item
+    fields = ["item_name", "item_desc", "item_price", "item_image"]
+    context_object_name = "form"
 
 def update_item(request, id):
     item = Item.objects.get(id=id)
