@@ -6,9 +6,18 @@ app_name = 'myapp'
 
 urlpatterns = [
     path('', views.index, name='index'), # naming url - to replace hardcoded urls from being used within our project
-    path('item/', views.ItemClassView.as_view(), name='home'),
-    path('<int:pk>/', views.DetailClassView.as_view(), name='detail'),
-    path('add/', views.CreateClassView.as_view(), name="create_item"),
-    path('update/<int:pk>', views.UpdateClassView.as_view(), name="update_item"),
-    path('delete/<int:pk>', views.DeleteClassView.as_view(), name="delete_item"),
+    path('item/', views.item, name='home'),
+    path('<int:id>/', views.detail, name='detail'),
+    path('add/', views.create_item, name="create_item"),
+    path('update/<int:id>', views.update_item, name="update_item"),
+    path('delete/<int:id>', views.delete_item, name="delete_item"),
 ]
+
+# urlpatterns = [
+#     path('', views.index, name='index'), # naming url - to replace hardcoded urls from being used within our project
+#     path('item/', views.ItemClassView.as_view(), name='home'),
+#     path('<int:pk>/', views.DetailClassView.as_view(), name='detail'),
+#     path('add/', views.CreateClassView.as_view(), name="create_item"),
+#     path('update/<int:pk>', views.UpdateClassView.as_view(), name="update_item"),
+#     path('delete/<int:pk>', views.DeleteClassView.as_view(), name="delete_item"),
+# ]
