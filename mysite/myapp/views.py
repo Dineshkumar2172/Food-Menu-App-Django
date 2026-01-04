@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -64,19 +64,24 @@ class CreateClassView(CreateView):
     fields = ["item_name", "item_desc", "item_price", "item_image"]
     context_object_name = "form"
 
-def update_item(request, id):
-    item = Item.objects.get(id=id)
-    form = ItemForm(request.POST or None, instance=item)
-    if request.method == "POST":
-        if form.is_valid():
-            form.save()
-            return redirect('myapp:home')
+# def update_item(request, id):
+#     item = Item.objects.get(id=id)
+#     form = ItemForm(request.POST or None, instance=item)
+#     if request.method == "POST":
+#         if form.is_valid():
+#             form.save()
+#             return redirect('myapp:home')
 
-    context = {
-        'form': form
-    }
+#     context = {
+#         'form': form
+#     }
 
-    return render(request, "myapp/item-form.html", context)
+#     return render(request, "myapp/item-form.html", context)
+
+class UpdateClassView(UpdateView):
+    model = Item
+    fields = ["item_name", "item_desc", "item_price", "item_image"]
+    template_name_suffix = "_update_form" # to configure template suffix to look for
 
 def delete_item(request, id):
     item = Item.objects.get(id=id)
@@ -87,4 +92,5 @@ def delete_item(request, id):
     context = {
         'item': item
     }
+
     return render(request, "myapp/item-delete.html", context=context)

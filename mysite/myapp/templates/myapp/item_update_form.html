@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html'%}
+
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" name="" id="">Save</input>
+</form>
+{% endblock %}
