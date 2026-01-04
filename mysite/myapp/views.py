@@ -4,7 +4,8 @@ from django.contrib.auth.decorators import login_required
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -83,14 +84,20 @@ class UpdateClassView(UpdateView):
     fields = ["item_name", "item_desc", "item_price", "item_image"]
     template_name_suffix = "_update_form" # to configure template suffix to look for
 
-def delete_item(request, id):
-    item = Item.objects.get(id=id)
-    if request.method == "POST":
-        item.delete()
-        return redirect("myapp:home")
+# def delete_item(request, id):
+#     item = Item.objects.get(id=id)
+#     if request.method == "POST":
+#         item.delete()
+#         return redirect("myapp:home")
 
-    context = {
-        'item': item
-    }
+#     context = {
+#         'item': item
+#     }
 
-    return render(request, "myapp/item-delete.html", context=context)
+#     return render(request, "myapp/item-delete.html", context=context)
+
+class DeleteClassView(DeleteView):
+    model = Item
+    template_name_suffix = "-delete"
+    context_object_name = "item"
+    success_url = reverse_lazy("myapp:home")
