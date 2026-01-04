@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -8,6 +9,7 @@ from myapp.forms import ItemForm
 def index(request):
     return HttpResponse("Hello World")
 
+@login_required
 def item(request):
     item_list = Item.objects.all()
     context = {
