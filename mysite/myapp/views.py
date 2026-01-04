@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -25,12 +27,20 @@ class ItemClassView(ListView):
     template_name = "myapp/index.html"
     context_object_name = "item_list"
 
-def detail(request, id):
-    item_detail = Item.objects.get(id=id)
-    context = {
-        "item_detail": item_detail
-    }
-    return render(request, "myapp/detail.html", context=context)
+# def detail(request, id):
+#     item_detail = Item.objects.get(id=id)
+#     context = {
+#         "item_detail": item_detail
+#     }
+#     return render(request, "myapp/detail.html", context=context)
+
+# implementing above detail view using class based detail view
+class DetailClassView(DetailView):
+    # here it take pk as an parameter instead of id
+    # it automatically handled getting detail based on pk (primary key)
+    model = Item
+    template_name = "myapp/detail.html"
+    context_object_name = "item_detail"
 
 def create_item(request):
     form = ItemForm(request.POST or None)
