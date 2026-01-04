@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.views.generic.list import ListView
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -9,14 +10,20 @@ from myapp.forms import ItemForm
 def index(request):
     return HttpResponse("Hello World")
 
-@login_required
-def item(request):
-    item_list = Item.objects.all()
-    context = {
-        'item_list': item_list
-    }
-    # return HttpResponse(item_list)
-    return render(request, "myapp/index.html", context=context)
+# @login_required
+# def item(request):
+#     item_list = Item.objects.all()
+#     context = {
+#         'item_list': item_list
+#     }
+#     # return HttpResponse(item_list)
+#     return render(request, "myapp/index.html", context=context)
+
+# implementing above item view using class based list view
+class ItemClassView(ListView):
+    model = Item
+    template_name = "myapp/index.html"
+    context_object_name = "item_list"
 
 def detail(request, id):
     item_detail = Item.objects.get(id=id)
