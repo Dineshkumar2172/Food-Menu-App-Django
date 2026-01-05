@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "myapp.middleware.LogRequestMiddleware",
     "myapp.middleware.TimerMiddleware",
+    "myapp.middleware.BlockIPMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
