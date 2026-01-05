@@ -24,7 +24,6 @@ class TimerMiddleware:
         duration = time.time() - start
         print(f"[Middleware] Request took {duration:.2f} seconds")
         return response
-    
 
 class BlockIPMiddleware:
     BLOCKED_IPS = []
