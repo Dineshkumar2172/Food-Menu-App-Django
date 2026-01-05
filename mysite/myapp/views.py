@@ -7,6 +7,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator
+from django.views.decorators.cache import cache_page
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -16,6 +17,7 @@ def index(request):
     return HttpResponse("Hello World")
 
 # @login_required
+@cache_page(60 * 15)
 def item(request):
     item_list = Item.objects.all()
 
@@ -30,6 +32,7 @@ def item(request):
     # return HttpResponse(item_list)
     return render(request, "myapp/index.html", context=context)
 
+@cache_page(60*15)
 def detail(request, id):
     item_detail = Item.objects.get(id=id)
     context = {
