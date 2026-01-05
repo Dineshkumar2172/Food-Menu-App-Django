@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator
 from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_headers
 
 from myapp.models import Item
 from myapp.forms import ItemForm
@@ -17,7 +18,9 @@ def index(request):
     return HttpResponse("Hello World")
 
 # @login_required
-# @cache_page(60 * 15)
+@cache_page(60 * 15)
+# caching based on header, for example in this case, we maintain different cache per user agent
+@vary_on_headers("User-Agent")
 def item(request):
     item_list = Item.objects.all()
 
