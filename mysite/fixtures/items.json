@@ -1,0 +1,222 @@
+[
+    {
+        "model": "myapp.item",
+        "pk": 1,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Margherita Pizza",
+            "item_desc": "Classic pizza with fresh tomato sauce, mozzarella cheese, and basil.",
+            "item_price": 299,
+            "item_image": "https://i.pinimg.com/736x/7d/04/f2/7d04f28fdf148207acc1815f7a398acb.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 2,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Veg Burger",
+            "item_desc": "Grilled vegetable patty with lettuce, tomato, and house sauce.",
+            "item_price": 199,
+            "item_image": "https://media.istockphoto.com/id/2061716709/photo/grilled-rib-burger.jpg?s=612x612&w=0&k=20&c=QS37W9zjBE3GoOeR8ay3k_DS7oXPH07MBg-WHY5Joac="
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 3,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Paneer Butter Masala",
+            "item_desc": "Cottage cheese cooked in a rich buttery tomato gravy.",
+            "item_price": 349,
+            "item_image": "https://thumbs.dreamstime.com/b/close-up-bowl-paneer-butter-masala-indian-dish-cubes-paneer-cheese-creamy-tomato-based-sauce-garnished-349049492.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 4,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Masala Dosa",
+            "item_desc": "Crispy dosa filled with spiced potato masala.",
+            "item_price": 149,
+            "item_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdwaQe2D0eOOsEWFWjzW6OrVI0elp-wGVkhw&s"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 5,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Cold Coffee",
+            "item_desc": "Chilled coffee blended with milk and ice.",
+            "item_price": 129,
+            "item_image": "https://static.vecteezy.com/system/resources/previews/002/186/935/large_2x/iced-coffee-with-milk-on-the-table-on-dark-background-free-photo.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 6,
+        "fields": {
+            "user_name": 1,
+            "item_name": "French Fries",
+            "item_desc": "Crispy golden fried potato sticks.",
+            "item_price": 99,
+            "item_image": "https://img.freepik.com/free-photo/delicious-fries-studio_23-2151846534.jpg?semt=ais_hybrid&w=740&q=80"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 7,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Veg Sandwich",
+            "item_desc": "Fresh vegetable sandwich with buttered bread.",
+            "item_price": 119,
+            "item_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXUKo8tJPQTKgFd6ngKsD4ZtBAb79VO2DSYw&s"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 8,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Chocolate Cake",
+            "item_desc": "Rich and moist chocolate layered cake.",
+            "item_price": 249,
+            "item_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2RkDeIncbuSh7zbWP5cZLvVG6tuchaGUWpQ&s"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 9,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Pasta Alfredo",
+            "item_desc": "Creamy white sauce pasta with vegetables.",
+            "item_price": 279,
+            "item_image": "https://thumbs.dreamstime.com/b/alfredo-pasta-dinner-creamy-white-sauce-herbs-isolated-black-background-generative-ai-alfredo-pasta-dinner-creamy-290267082.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 10,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Veg Biryani",
+            "item_desc": "Aromatic basmati rice cooked with vegetables and spices.",
+            "item_price": 299,
+            "item_image": "https://www.cubesnjuliennes.com/wp-content/uploads/2019/03/Instant-Pot-Veg-Biryani-Recipe-500x500.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 11,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Idli Sambar",
+            "item_desc": "Soft steamed rice cakes served with sambar and chutney.",
+            "item_price": 89,
+            "item_image": "https://thumbs.dreamstime.com/b/idli-vada-sambhar-chutney-famous-south-indian-breakfast-dish-isolated-black-background-idli-vada-sambhar-255733172.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 12,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Veg Fried Rice",
+            "item_desc": "Stir-fried rice with vegetables and soy sauce.",
+            "item_price": 219,
+            "item_image": "https://thumbs.dreamstime.com/b/savory-fried-rice-garnished-cilantro-black-plate-dark-background-featuring-egg-corn-peas-peppers-healthy-asian-cuisine-378753373.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 13,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Manchurian",
+            "item_desc": "Crispy vegetable balls tossed in spicy sauce.",
+            "item_price": 189,
+            "item_image": "https://media.istockphoto.com/id/1208083887/photo/freshly-prepared-veg-manchurian-with-a-bowl-of-fried-rice.jpg?s=612x612&w=0&k=20&c=nTtgKk-SSQAh1E0Pz8SnpGjqMRSIIXM6XiDHIsd5LDQ="
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 14,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Spring Rolls",
+            "item_desc": "Crispy rolls stuffed with vegetables.",
+            "item_price": 169,
+            "item_image": "https://thumbs.dreamstime.com/b/vegetable-filled-spring-rolls-soy-sauce-black-wooden-table-vegetable-filled-spring-rolls-soy-sauce-black-wooden-292659926.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 15,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Cheese Pizza",
+            "item_desc": "Loaded cheese pizza with crispy crust.",
+            "item_price": 329,
+            "item_image": "https://static.vecteezy.com/system/resources/thumbnails/023/779/360/small/delicious-pizza-slice-topped-with-cheese-olives-and-tomato-presented-on-a-black-background-generative-ai-photo.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 16,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Fruit Salad",
+            "item_desc": "Fresh seasonal fruits served chilled.",
+            "item_price": 159,
+            "item_image": "https://media.istockphoto.com/id/1225981808/photo/healthy-homemade-fruit-salad-bowl-shot-from-above.jpg?s=612x612&w=0&k=20&c=f9hWan8nPo4C0UKxG7bF65cAmyUhbb-Qa0TYrc0BwWc="
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 17,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Milkshake",
+            "item_desc": "Thick milkshake with vanilla ice cream.",
+            "item_price": 179,
+            "item_image": "https://www.shutterstock.com/image-photo/pieces-bitter-chocolate-fall-glass-600nw-2619786085.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 18,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Veg Wrap",
+            "item_desc": "Soft wrap filled with veggies and sauce.",
+            "item_price": 189,
+            "item_image": "https://www.shutterstock.com/image-photo/delicious-fresh-roll-chicken-tomatoes-600nw-2264520507.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 19,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Tomato Soup",
+            "item_desc": "Warm and creamy tomato soup.",
+            "item_price": 99,
+            "item_image": "https://images.indianexpress.com/2025/02/tomato-soup.jpg"
+        }
+    },
+    {
+        "model": "myapp.item",
+        "pk": 20,
+        "fields": {
+            "user_name": 1,
+            "item_name": "Ice Cream",
+            "item_desc": "Classic vanilla ice cream scoop.",
+            "item_price": 79,
+            "item_image": "https://media.istockphoto.com/id/936205852/photo/chocolate-ice-cream-in-a-glass-cup.jpg?s=612x612&w=0&k=20&c=gcPTroDVPNSlCS45BkqEG-6-REnKFEzboBpuX8O3lY4="
+        }
+    }
+]
