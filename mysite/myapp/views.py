@@ -17,10 +17,10 @@ from myapp.forms import ItemForm
 def index(request):
     return HttpResponse("Hello World")
 
-# @login_required
-@cache_page(60 * 15)
-# caching based on header, for example in this case, we maintain different cache per user agent
-@vary_on_headers("User-Agent")
+# # @login_required
+# @cache_page(60 * 15)
+# # caching based on header, for example in this case, we maintain different cache per user agent
+# @vary_on_headers("User-Agent")
 def item(request):
     item_list = Item.objects.all()
 
